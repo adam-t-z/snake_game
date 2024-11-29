@@ -56,7 +56,6 @@ snake-game/
 
 ## Screenshots
 ![Gameplay Screenshot](https://via.placeholder.com/800x600.png?text=Gameplay+Screenshot)  
-*Replace the placeholder with a screenshot of your game.*
 
 ---
 
