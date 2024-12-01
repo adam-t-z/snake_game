@@ -55,8 +55,7 @@ snake-game/
 ---
 
 ## Screenshots
-![Gameplay Screenshot](https://via.placeholder.com/800x600.png?text=Gameplay+Screenshot)  
-
+![snake_game](https://github.com/user-attachments/assets/4f3117cd-f664-48cc-aa8a-2f3da8952d1e)
 ---
 
 ## License
