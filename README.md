@@ -55,7 +55,7 @@ snake-game/
 ---
 
 ## Screenshots
-![snake_game](https://github.com/user-attachments/assets/4f3117cd-f664-48cc-aa8a-2f3da8952d1e)
+![snake_game-ezgif com-resize](https://github.com/user-attachments/assets/99795831-ba1a-4a7a-8710-3e73124380c6)
 ---
 
 ## License
