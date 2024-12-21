@@ -13,18 +13,20 @@ class Scoreboard(Turtle):
         """
         super().__init__()  # Call the Turtle class constructor
         self.score = 0  # Initialize the score to 0
+        self.highscore = 0 # highest score
         self.color("white")  # Set the text color to white
         self.penup()  # Disable drawing when moving the turtle
         self.goto(0, 350)  # Position the scoreboard at the top center of the screen
         self.hideturtle()  # Hide the turtle shape (only the text will be visible)
         self.update_scoreboard()  # Display the initial score
 
+
     def update_scoreboard(self):
         """
         Displays the current score on the screen.
         Clears any previous text before writing the updated score.
         """
-        self.write(f"SCORE: {self.score}", align="center", font=("Arial", 24, "normal"))
+        self.write(f"SCORE: {self.score}    HIGH SCORE: {self.highscore}", align="center", font=("Arial", 20, "normal"))
 
     def increase_score(self):
         """
@@ -38,6 +40,11 @@ class Scoreboard(Turtle):
         """
         Changes the background to a "game-over" theme and displays a final score message.
         """
+        self.clear()
         self.screen.bgcolor("darkred")  # Change the screen background color to dark red
         self.goto(0, 0)  # Move the text to the center of the screen
-        self.write(f"  Game Over \nFinal Score: {self.score}", align="center", font=("Arial", 24, "normal"))
+        
+        if self.score > self.highscore:
+            self.highscore = self.score
+
+        self.write(f"--------- Game Over --------- \n\nFinal Score: {self.score}\n\nHigh Score: {self.highscore} ", align="center", font=("Arial", 24, "normal"))
