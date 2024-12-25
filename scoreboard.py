@@ -42,7 +42,7 @@ class Scoreboard(Turtle):
         """
         self.clear()
         self.screen.bgcolor("darkred")  # Change the screen background color to dark red
-        self.goto(0, 0)  # Move the text to the center of the screen
+        self.goto(0, -50)  # Move the text to the center of the screen
         
         if self.score > self.highscore:
             self.highscore = self.score
