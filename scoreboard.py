@@ -11,22 +11,29 @@ class Scoreboard(Turtle):
         Initializes the scoreboard with a starting score of 0 and positions it at the top center of the screen.
         Inherits from the Turtle class.
         """
-        super().__init__()  # Call the Turtle class constructor
-        self.score = 0  # Initialize the score to 0
-        self.highscore = 0 # highest score
-        self.color("white")  # Set the text color to white
+        super().__init__()  
+        self.score = 0  
+        self.highscore = self.get_highscore()
+        self.color("white")  
         self.penup()  # Disable drawing when moving the turtle
         self.goto(0, 350)  # Position the scoreboard at the top center of the screen
         self.hideturtle()  # Hide the turtle shape (only the text will be visible)
         self.update_scoreboard()  # Display the initial score
 
+    def get_highscore(self):
+        with open("highscore.txt", "r") as file:
+            return int(file.read())
+
+    def save_highscore(self):
+        with open("highscore.txt", "w") as file:
+                file.write(str(self.highscore))
 
     def update_scoreboard(self):
         """
         Displays the current score on the screen.
         Clears any previous text before writing the updated score.
         """
-        self.write(f"SCORE: {self.score}    HIGH SCORE: {self.highscore}", align="center", font=("Arial", 20, "normal"))
+        self.write(f"SCORE: {self.score}         HIGH SCORE: {self.highscore}", align="center", font=("Arial", 20, "normal"))
 
     def increase_score(self):
         """
@@ -46,5 +53,7 @@ class Scoreboard(Turtle):
         
         if self.score > self.highscore:
             self.highscore = self.score
+            self.save_highscore()
 
         self.write(f"--------- Game Over --------- \n\nFinal Score: {self.score}\n\nHigh Score: {self.highscore} ", align="center", font=("Arial", 24, "normal"))
+

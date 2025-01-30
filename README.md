@@ -49,6 +49,7 @@ snake-game/
 ├── snake.py         # Snake class (handles movement, growth, and direction)
 ├── food.py          # Food class (handles random food generation)
 ├── scoreboard.py    # Scoreboard class (handles scoring and game-over display)
+├── highscore.txt    # Save highest score so far
 └── README.md        # Project documentation
 ```
 
